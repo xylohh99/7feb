@@ -16,12 +16,12 @@
     body {
       background: linear-gradient(135deg, #ffe6f0, #fff);
       height: 100vh;
-      overflow: hidden;
+      overflow-y: auto;
     }
 
     .page {
       display: none;
-      height: 100vh;
+      min-height: 100vh;
       padding: 30px 20px;
       text-align: center;
       flex-direction: column;
@@ -64,6 +64,13 @@
       transform: scale(0.96);
     }
 
+    /* PAGE 2 FIXES */
+    #page2 {
+      justify-content: flex-start;
+      overflow-y: auto;
+      padding-top: 30px;
+    }
+
     .message {
       font-size: 1.1rem;
       line-height: 1.7;
@@ -71,6 +78,7 @@
       max-width: 600px;
       margin-bottom: 25px;
       white-space: pre-line;
+      padding-bottom: 40px;
     }
 
     .gallery {
@@ -79,6 +87,7 @@
       gap: 12px;
       width: 100%;
       max-width: 320px;
+      margin-bottom: 40px;
     }
 
     .gallery img {
@@ -124,6 +133,7 @@ Happy Birthday, my love. 💖 It’s finally your day, and I wanted to start it 
     function openGifts() {
       document.getElementById('page1').classList.remove('active');
       document.getElementById('page2').classList.add('active');
+      window.scrollTo(0, 0);
     }
   </script>
 
